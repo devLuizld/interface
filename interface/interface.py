@@ -27,35 +27,27 @@ def calcular_imc():
     except ValueError:
         tk.messagebox.showerror("Erro", "Por favor, insira valores numéricos válidos.")
 
-
 root = tk.Tk()
 root.title("Calculadora de IMC")
-root.geometry("300x200")
+root.geometry("500x400")
+root.configure(bg='black')
 
-
-root.configure(bg='lightblue')  
-
-
-label_peso = tk.Label(root, text="Peso (kg):", bg='lightblue')  
+label_peso = tk.Label(root, text="Peso (kg):", bg='black', fg='white', font=('Arial', 10, 'bold'))
 label_peso.pack(pady=5)
 
 entrada_peso = tk.Entry(root)
 entrada_peso.pack(pady=5)
 
-
-label_altura = tk.Label(root, text="Altura (cm):", bg='lightblue')  
+label_altura = tk.Label(root, text="Altura (cm):", bg='black', fg='white', font=('Arial', 10, 'bold'))
 label_altura.pack(pady=5)
 
 entrada_altura = tk.Entry(root)
 entrada_altura.pack(pady=5)
 
-
 botao_calcular = tk.Button(root, text="Calcular IMC", command=calcular_imc)
 botao_calcular.pack(pady=10)
 
-
-label_resultado = tk.Label(root, text="", bg='lightblue')  
+label_resultado = tk.Label(root, text="", bg='black', fg='white', font=('Arial', 10, 'bold'))
 label_resultado.pack(pady=10)
-
 
 root.mainloop()
